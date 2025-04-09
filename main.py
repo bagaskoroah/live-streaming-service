@@ -67,13 +67,13 @@ class User:
                     elif value[0] == 'Standard Plan':
                         filtered_data = [[column[1], column[3]] for column in User.benefit_table]
                         filtered_headers = ['Standard Plan', 'Services']
-                        print('\nBasic Plan PacFlix Benefit List\n')
+                        print('\nStandard Plan PacFlix Benefit List\n')
                         print(tabulate(filtered_data, headers=filtered_headers))
 
                     elif value[0] == 'Premium Plan':
                         filtered_data = [[column[2], column[3]] for column in User.benefit_table]
                         filtered_headers = ['Premium Plan', 'Services']
-                        print('\nBasic Plan PacFlix Benefit List\n')
+                        print('\nPremium Plan PacFlix Benefit List\n')
                         print(tabulate(filtered_data, headers=filtered_headers))
 
                     else:
@@ -171,3 +171,6 @@ class NewUser:
                 raise Exception('Plan yang kamu maksud tidak tersedia.')
         else:
             raise Exception('Referral code tidak dapat ditemukan.')
+
+faizal = NewUser("faizal_icikiwir")
+print(faizal.pick_plan("Basic Plan", "indira-22gs"))
