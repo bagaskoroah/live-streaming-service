@@ -43,29 +43,35 @@ Memilih jenis plan saat registrasi awal, dan mendapatkan potongan harga apabila 
 
 ## Test Case 1: Mengecek benefit secara keseluruhan
 Object => user_1 = User("Cahya", 24, "Standard Plan")
+
 user_1.check_benefit()
 
 ![image](https://github.com/user-attachments/assets/21f06ae7-f402-4ecb-9053-90b0c9d6488c)
 
 ## Test Case 2: Mengecek benefit user berdasarkan input username
 Object => user_1 = User("Cahya", 24, "Standard Plan")
+
 user_1.check_plan(user_1.username)
 
 ![image](https://github.com/user-attachments/assets/ea39f245-83b5-4d7a-b535-81a8636da100)
 
 ## Test Case 3: Meningkatkan level plan
 Object => user_1 = User("Cahya", 24, "Standard Plan")
+
 user_1.upgrade_plan(user_1.current_plan, "Premium Plan")
 
 ![image](https://github.com/user-attachments/assets/bf63bb9e-aa02-4419-95e2-6e8b67b5079e)
 
 ## Test Case 4: Mengimplementasikan referral bagi user baru
+
 faizal = NewUser("faizal_icikiwir")
+
 faizal.pick_plan("Basic Plan", "shandy-2134")
 
 ![image](https://github.com/user-attachments/assets/77aacdb9-717a-4383-8978-3aaa7bee1ac9)
 
 Apabila referral code tidak tersedia pada database tersimpan di dictionary:
+
 faizal.pick_plan("Basic Plan", "indira-22gs")
 
 ![image](https://github.com/user-attachments/assets/f5126877-8b67-413b-9f70-032c273dd773)
