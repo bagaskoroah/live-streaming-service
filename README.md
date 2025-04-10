@@ -18,15 +18,19 @@ Program ini merupakan simulasi sistem manajemen langganan layanan streaming PacF
 Kelas yang merepresentasikan pengguna yang sudah memiliki akun dan langganan aktif.
 
 a. __init__(self, username, duration_plan, current_plan)
+
 Inisialisasi objek User dengan nama, durasi langganan, dan jenis plan aktif.
 
 b. check_benefit(self)
+
 Menampilkan daftar lengkap benefit dari semua jenis plan (Basic, Standard, Premium).
 
 c. check_plan(self, username)
+
 Menampilkan detail plan dan daftar benefit sesuai dengan plan yang dimiliki pengguna tertentu.
 
 d. upgrade_plan(self, current_plan, new_plan)
+
 Melakukan proses upgrade plan jika memenuhi syarat tertentu seperti durasi langganan. Memberikan potongan harga jika berlaku.
 
 - Class 2: NewUser
@@ -34,9 +38,11 @@ Melakukan proses upgrade plan jika memenuhi syarat tertentu seperti durasi langg
 Kelas untuk pengguna baru yang belum berlangganan, memungkinkan memilih plan dan menggunakan kode referral.
 
 a. __init__(self, username)
+
 Inisialisasi objek NewUser dengan nama pengguna baru.
 
 b. pick_plan(self, new_plan, code_referral)
+
 Memilih jenis plan saat registrasi awal, dan mendapatkan potongan harga apabila referral code valid.
 
 # Hasil Test Case
