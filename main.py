@@ -51,7 +51,7 @@ class User:
         :param username: Nama pengguna
         """
         for key, value in data.items():
-            if key == self.username:
+            if key == username:
                 try:
                     # Tampilkan plan dan durasi aktif
                     print(value[0])
@@ -97,15 +97,19 @@ class User:
                         if self.duration_plan > 12:
                             # Diskon 5% jika langganan > 12 bulan
                             if new_plan == 'Standard Plan':
+                                self.current_plan = new_plan
                                 return 160000 - (0.05 * 160000)
                             elif new_plan == 'Premium Plan':
+                                self.current_plan = new_plan
                                 return 200000 - (0.05 * 200000)
                             else:
                                 raise Exception('Plan yang kamu maksud tidak tersedia.')
                         else:
                             if new_plan == 'Standard Plan':
+                                self.current_plan = new_plan
                                 return 160000
                             elif new_plan == 'Premium Plan':
+                                self.current_plan = new_plan
                                 return 200000
                             else:
                                 raise Exception('Plan yang kamu maksud tidak tersedia.')
@@ -116,6 +120,7 @@ class User:
                             if new_plan == 'Basic Plan':
                                 return 'Kamu tidak bisa downgrade plan!'
                             elif new_plan == 'Premium Plan':
+                                self.current_plan = new_plan
                                 return 200000 - (0.05 * 200000)
                             else:
                                 raise Exception('Plan yang kamu maksud tidak tersedia.')
@@ -123,6 +128,7 @@ class User:
                             if new_plan == 'Basic Plan':
                                 return 'Kamu tidak bisa downgrade plan!'
                             elif new_plan == 'Premium Plan':
+                                self.current_plan = new_plan
                                 return 200000
                             else:
                                 raise Exception('Plan yang kamu maksud tidak tersedia.')
