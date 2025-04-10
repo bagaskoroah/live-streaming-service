@@ -171,6 +171,3 @@ class NewUser:
                 raise Exception('Plan yang kamu maksud tidak tersedia.')
         else:
             raise Exception('Referral code tidak dapat ditemukan.')
-
-faizal = NewUser("faizal_icikiwir")
-print(faizal.pick_plan("Basic Plan", "indira-22gs"))
